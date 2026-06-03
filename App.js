@@ -10,6 +10,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import MCQScreen from './src/screens/MCQScreen';
 import SubjectTestScreen from './src/screens/SubjectTestScreen';
 import TestSeriesScreen from './src/screens/TestSeriesScreen';
+import SettingsScreen from "./src/screens/SettingsScreen";
 import LeaderboardScreen from './src/screens/LeaderboardScreen';
 import DailyQuizScreen from './src/screens/DailyQuizScreen';
 import { View, ActivityIndicator } from 'react-native';
@@ -34,6 +35,7 @@ function AppStack() {
       <Stack.Screen name="TestSeries" component={TestSeriesScreen} />
       <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />
       <Stack.Screen name="DailyQuiz" component={DailyQuizScreen} />
+      <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
   );
 }

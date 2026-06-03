@@ -92,13 +92,7 @@ export default function HomeScreen({ navigation }) {
                 <MenuItem icon="📬" label="Inbox" />
 
                 <Text style={styles.menuSection}>⚙️ SETTINGS & SUPPORT</Text>
-                <MenuItem icon="⚙️" label="Settings" />
-                <MenuItem icon="🌙" label="Dark Mode" />
-                <MenuItem icon="❓" label="Help & Support" />
-                <MenuItem icon="📞" label="Contact Us" />
-                <MenuItem icon="ℹ️" label="About RPREP" />
-                <MenuItem icon="📄" label="Terms & Privacy" />
-                <MenuItem icon="🔄" label="Sync Data" />
+                <MenuItem icon="⚙️" label="Settings" onPress={() => { closeMenu(); navigation.navigate("Settings"); }} />
                 <View style={{ height: 30 }} />
               </ScrollView>
 
