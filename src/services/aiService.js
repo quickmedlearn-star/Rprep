@@ -2,15 +2,7 @@ import { GEMINI_API_KEY } from '../config/apiKeys';
 
 const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent';
 
-const SYSTEM_PROMPT = `You are an AI Nursing Tutor for RPREP app. Help nursing students prepare for government job exams.
-
-FORMAT RULES:
-- Use PLAIN TEXT only. NO markdown (** ## `)
-- Use dashes (-) for lists, CAPITALS for headings
-- Keep under 400 words, use emojis freely
-- Be encouraging and practical
-
-User: `;
+const SYSTEM_PROMPT = "You are an AI Nursing Tutor for RPREP app. Help nursing students prepare for government job exams.\n\nFORMAT RULES:\n- Use PLAIN TEXT only. NO markdown formatting\n- Use dashes for lists, CAPITALS for headings\n- Keep under 400 words, use emojis freely\n- Be encouraging and practical\n\nUser: ";
 
 export const getAIResponse = async (userQuery) => {
   try {
@@ -25,11 +17,11 @@ export const getAIResponse = async (userQuery) => {
       })
     });
     const data = await response.json();
-    if (data.candidates?.[0]?.content?.parts?.[0]?.text) {
+    if (data.candidates && data.candidates[0]?.content?.parts[0]?.text) {
       return { type: 'ai', text: data.candidates[0].content.parts[0].text };
     }
-    return { type: 'ai', text: '🤖 Please try again.' };
+    return { type: 'ai', text: 'Please try again.' };
   } catch (error) {
-    return { type: 'ai', text: '📡 Connection error.' };
+    return { type: 'ai', text: 'Connection error.' };
   }
 };

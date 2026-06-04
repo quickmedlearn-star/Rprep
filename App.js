@@ -18,6 +18,8 @@ import WeakAreasScreen from "./src/screens/WeakAreasScreen";
 import TestHistoryScreen from "./src/screens/TestHistoryScreen";
 import BookmarkedScreen from "./src/screens/BookmarkedScreen";
 import AITutorScreen from "./src/screens/AITutorScreen";
+import StudyPlanScreen from "./src/screens/StudyPlanScreen";
+import ExamPredictorScreen from "./src/screens/ExamPredictorScreen";
 import { View, ActivityIndicator } from 'react-native';
 
 const Stack = createNativeStackNavigator();
@@ -45,6 +47,8 @@ function AppStack() {
       <Stack.Screen name="TestHistory" component={TestHistoryScreen} />
       <Stack.Screen name="Bookmarked" component={BookmarkedScreen} />
       <Stack.Screen name="AITutor" component={AITutorScreen} />
+      <Stack.Screen name="StudyPlan" component={StudyPlanScreen} />
+      <Stack.Screen name="ExamPredictor" component={ExamPredictorScreen} />
       <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
   );

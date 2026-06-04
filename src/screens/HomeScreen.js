@@ -76,9 +76,9 @@ export default function HomeScreen({ navigation }) {
 
                 <Text style={styles.menuSection}>🤖 AI POWERED</Text>
                 <MenuItem icon="🤖" label="AI Tutor" badge="PRO" badgeType="pro" onPress={() => { closeMenu(); navigation.navigate("AITutor"); }} />
-                <MenuItem icon="🧠" label="Smart Study Plan" badge="AI" badgeType="ai" />
-                <MenuItem icon="📊" label="Exam Predictor" badge="AI" badgeType="ai" />
-                <MenuItem icon="🎯" label="Weak Area Detector" badge="AI" badgeType="ai" />
+                <MenuItem icon="🧠" label="Smart Study Plan" badge="AI" badgeType="ai" onPress={() => { closeMenu(); navigation.navigate("StudyPlan"); }} />
+                <MenuItem icon="📊" label="Exam Predictor" badge="AI" badgeType="ai" onPress={() => { closeMenu(); navigation.navigate("ExamPredictor"); }} />
+                <MenuItem icon="🎯" label="Weak Area Detector" badge="AI" badgeType="ai" onPress={() => { closeMenu(); navigation.navigate("WeakAreas"); }} />
 
                 <Text style={styles.menuSection}>💎 PREMIUM</Text>
                 <MenuItem icon="💎" label="Go Premium" badge="🔥" badgeType="hot" />
