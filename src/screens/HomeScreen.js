@@ -75,7 +75,7 @@ export default function HomeScreen({ navigation }) {
                 <MenuItem icon="💬" label="Discussion Forum" />
 
                 <Text style={styles.menuSection}>🤖 AI POWERED</Text>
-                <MenuItem icon="🤖" label="AI Tutor" badge="PRO" badgeType="pro" />
+                <MenuItem icon="🤖" label="AI Tutor" badge="PRO" badgeType="pro" onPress={() => { closeMenu(); navigation.navigate("AITutor"); }} />
                 <MenuItem icon="🧠" label="Smart Study Plan" badge="AI" badgeType="ai" />
                 <MenuItem icon="📊" label="Exam Predictor" badge="AI" badgeType="ai" />
                 <MenuItem icon="🎯" label="Weak Area Detector" badge="AI" badgeType="ai" />
