@@ -62,11 +62,11 @@ export default function HomeScreen({ navigation }) {
                 <MenuItem icon="📖" label="Study Material" />
 
                 <Text style={styles.menuSection}>📊 PRACTICE & ANALYSIS</Text>
-                <MenuItem icon="📊" label="My Progress" />
-                <MenuItem icon="📈" label="Weak Areas" badge="AI" badgeType="ai" />
+                <MenuItem icon="📊" label="My Progress" onPress={() => { closeMenu(); navigation.navigate("Progress"); }} />
+                <MenuItem icon="📈" label="Weak Areas" badge="AI" badgeType="ai" onPress={() => { closeMenu(); navigation.navigate("WeakAreas"); }} />
                 <MenuItem icon="🏆" label="Leaderboard" onPress={() => { closeMenu(); navigation.navigate('Leaderboard'); }} />
-                <MenuItem icon="⏱️" label="Test History" />
-                <MenuItem icon="📑" label="Bookmarked Qs" badge="23" badgeType="count" />
+                <MenuItem icon="⏱️" label="Test History" onPress={() => { closeMenu(); navigation.navigate("TestHistory"); }} />
+                <MenuItem icon="📑" label="Bookmarked Qs" badge="23" badgeType="count" onPress={() => { closeMenu(); navigation.navigate("Bookmarked"); }} />
 
                 <Text style={styles.menuSection}>⚡ INTERACTIVE</Text>
                 <MenuItem icon="⚔️" label="1v1 Battle" badge="LIVE" badgeType="hot" />

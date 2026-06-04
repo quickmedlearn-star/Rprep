@@ -91,10 +91,18 @@ export default function SettingsScreen({ navigation }) {
     ]);
   };
 
+
   const handleAbout = () => {
-    Alert.alert('ℹ️ RPREP v1.0.0', 'Your Nursing Success Partner\n\nIndia\'s #1 Nursing Exam Prep Platform\nAI-Powered Learning\n\n© 2026 RPREP Technologies');
+    Alert.alert("ℹ️ About RPREP", "Your Nursing Success Partner\n\nVersion: 1.0.0 Pro\n\nIndia's #1 Nursing Exam Prep Platform\n🎯 7500+ MCQs | 16 Subjects\n🤖 AI-Powered Learning\n\n📧 support@rprep.com\n© 2026 RPREP Technologies");
   };
 
+  const handleTerms = () => {
+    Alert.alert("📄 Terms & Conditions", "By using RPREP:\n\n1. Personal learning only\n2. Do not share content\n3. Keep account secure\n4. No unfair means\n\n📌 Free & Premium content\n📌 No refund after 24hrs\n\nLast updated: Jan 2026");
+  };
+
+  const handlePrivacy = () => {
+    Alert.alert("🔏 Privacy Policy", "We protect your data:\n\n📊 Collected: Name, Email, Scores\n🔒 Encrypted & secure\n🚫 Never shared\n✅ Delete account anytime\n\n📧 privacy@rprep.com\n\nCompliant with IT Act & GDPR");
+  };
   return (
     <View style={styles.container}>
       <Header title="Settings" subtitle="Customize your experience" showBack onBack={() => navigation.goBack()} />
@@ -114,23 +122,6 @@ export default function SettingsScreen({ navigation }) {
           <Text style={styles.profileArrow}>›</Text>
         </TouchableOpacity>
 
-        <Text style={styles.sectionTitle}>APPEARANCE</Text>
-        <View style={styles.sectionCard}>
-          <View style={styles.settingItem}><View style={styles.settingLeft}><Text style={styles.settingIcon}>🌙</Text><Text style={styles.settingLabel}>Dark Mode</Text></View><Switch value={darkMode} onValueChange={setDarkMode} trackColor={{ false: '#333', true: COLORS.primary }} thumbColor={darkMode ? '#fff' : '#888'} /></View>
-          <View style={styles.settingBorder} />
-          <View style={styles.settingItem}><View style={styles.settingLeft}><Text style={styles.settingIcon}>🔤</Text><Text style={styles.settingLabel}>Font Size</Text></View><Text style={styles.settingValue}>Medium</Text></View>
-        </View>
-
-        <Text style={styles.sectionTitle}>NOTIFICATIONS</Text>
-        <View style={styles.sectionCard}>
-          <View style={styles.settingItem}><View style={styles.settingLeft}><Text style={styles.settingIcon}>🔔</Text><Text style={styles.settingLabel}>Push Notifications</Text></View><Switch value={notifications} onValueChange={setNotifications} trackColor={{ false: '#333', true: COLORS.primary }} thumbColor={notifications ? '#fff' : '#888'} /></View>
-          <View style={styles.settingBorder} />
-          <View style={styles.settingItem}><View style={styles.settingLeft}><Text style={styles.settingIcon}>📢</Text><Text style={styles.settingLabel}>Exam Alerts</Text></View><Switch value={examAlerts} onValueChange={setExamAlerts} trackColor={{ false: '#333', true: COLORS.primary }} thumbColor={examAlerts ? '#fff' : '#888'} /></View>
-          <View style={styles.settingBorder} />
-          <View style={styles.settingItem}><View style={styles.settingLeft}><Text style={styles.settingIcon}>📧</Text><Text style={styles.settingLabel}>Email Updates</Text></View><Switch value={emailUpdates} onValueChange={setEmailUpdates} trackColor={{ false: '#333', true: COLORS.primary }} thumbColor={emailUpdates ? '#fff' : '#888'} /></View>
-        </View>
-
-        <Text style={styles.sectionTitle}>QUIZ SETTINGS</Text>
         <View style={styles.sectionCard}>
           <View style={styles.settingItem}><View style={styles.settingLeft}><Text style={styles.settingIcon}>🔊</Text><Text style={styles.settingLabel}>Sound Effects</Text></View><Switch value={sound} onValueChange={setSound} trackColor={{ false: '#333', true: COLORS.primary }} thumbColor={sound ? '#fff' : '#888'} /></View>
           <View style={styles.settingBorder} />
@@ -163,9 +154,9 @@ export default function SettingsScreen({ navigation }) {
         <View style={styles.sectionCard}>
           <TouchableOpacity style={styles.settingItem} onPress={handleAbout}><View style={styles.settingLeft}><Text style={styles.settingIcon}>ℹ️</Text><Text style={styles.settingLabel}>About RPREP</Text></View><Text style={styles.settingArrow}>›</Text></TouchableOpacity>
           <View style={styles.settingBorder} />
-          <TouchableOpacity style={styles.settingItem}><View style={styles.settingLeft}><Text style={styles.settingIcon}>📄</Text><Text style={styles.settingLabel}>Terms & Conditions</Text></View><Text style={styles.settingArrow}>›</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.settingItem} onPress={handleTerms}><View style={styles.settingLeft}><Text style={styles.settingIcon}>📄</Text><Text style={styles.settingLabel}>Terms & Conditions</Text></View><Text style={styles.settingArrow}>›</Text></TouchableOpacity>
           <View style={styles.settingBorder} />
-          <TouchableOpacity style={styles.settingItem}><View style={styles.settingLeft}><Text style={styles.settingIcon}>🔏</Text><Text style={styles.settingLabel}>Privacy Policy</Text></View><Text style={styles.settingArrow}>›</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.settingItem} onPress={handlePrivacy}><View style={styles.settingLeft}><Text style={styles.settingIcon}>🔏</Text><Text style={styles.settingLabel}>Privacy Policy</Text></View><Text style={styles.settingArrow}>›</Text></TouchableOpacity>
           <View style={styles.settingBorder} />
           <TouchableOpacity style={styles.settingItem}><View style={styles.settingLeft}><Text style={styles.settingIcon}>⭐</Text><Text style={styles.settingLabel}>Rate Us</Text></View><Text style={styles.settingArrow}>›</Text></TouchableOpacity>
         </View>
