@@ -20,6 +20,17 @@ import BookmarkedScreen from "./src/screens/BookmarkedScreen";
 import AITutorScreen from "./src/screens/AITutorScreen";
 import StudyPlanScreen from "./src/screens/StudyPlanScreen";
 import ExamPredictorScreen from "./src/screens/ExamPredictorScreen";
+import PremiumScreen from "./src/screens/PremiumScreen";
+import StoreScreen from "./src/screens/StoreScreen";
+import ReferScreen from "./src/screens/ReferScreen";
+import WalletScreen from "./src/screens/WalletScreen";
+import NotificationsScreen from "./src/screens/NotificationsScreen";
+import AnnouncementsScreen from "./src/screens/AnnouncementsScreen";
+import InboxScreen from "./src/screens/InboxScreen";
+import BattleScreen from "./src/screens/BattleScreen";
+import DailyChallengeScreen from "./src/screens/DailyChallengeScreen";
+import StudyGroupsScreen from "./src/screens/StudyGroupsScreen";
+import ForumScreen from "./src/screens/ForumScreen";
 import { View, ActivityIndicator } from 'react-native';
 
 const Stack = createNativeStackNavigator();
@@ -49,6 +60,17 @@ function AppStack() {
       <Stack.Screen name="AITutor" component={AITutorScreen} />
       <Stack.Screen name="StudyPlan" component={StudyPlanScreen} />
       <Stack.Screen name="ExamPredictor" component={ExamPredictorScreen} />
+      <Stack.Screen name="Premium" component={PremiumScreen} />
+      <Stack.Screen name="Store" component={StoreScreen} />
+      <Stack.Screen name="Refer" component={ReferScreen} />
+      <Stack.Screen name="Wallet" component={WalletScreen} />
+      <Stack.Screen name="Notifications" component={NotificationsScreen} />
+      <Stack.Screen name="Announcements" component={AnnouncementsScreen} />
+      <Stack.Screen name="Inbox" component={InboxScreen} />
+      <Stack.Screen name="Battle" component={BattleScreen} />
+      <Stack.Screen name="DailyChallenge" component={DailyChallengeScreen} />
+      <Stack.Screen name="StudyGroups" component={StudyGroupsScreen} />
+      <Stack.Screen name="Forum" component={ForumScreen} />
       <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
   );

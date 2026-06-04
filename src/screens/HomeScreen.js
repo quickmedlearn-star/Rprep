@@ -69,10 +69,10 @@ export default function HomeScreen({ navigation }) {
                 <MenuItem icon="📑" label="Bookmarked Qs" badge="23" badgeType="count" onPress={() => { closeMenu(); navigation.navigate("Bookmarked"); }} />
 
                 <Text style={styles.menuSection}>⚡ INTERACTIVE</Text>
-                <MenuItem icon="⚔️" label="1v1 Battle" badge="LIVE" badgeType="hot" />
-                <MenuItem icon="🎯" label="Daily Challenge" />
-                <MenuItem icon="👥" label="Study Groups" />
-                <MenuItem icon="💬" label="Discussion Forum" />
+                <MenuItem icon="⚔️" label="1v1 Battle" badge="LIVE" badgeType="hot" onPress={() => { closeMenu(); navigation.navigate("Battle"); }} />
+                <MenuItem icon="🎯" label="Daily Challenge" onPress={() => { closeMenu(); navigation.navigate("DailyChallenge"); }} />
+                <MenuItem icon="👥" label="Study Groups" onPress={() => { closeMenu(); navigation.navigate("StudyGroups"); }} />
+                <MenuItem icon="💬" label="Discussion Forum" onPress={() => { closeMenu(); navigation.navigate("Forum"); }} />
 
                 <Text style={styles.menuSection}>🤖 AI POWERED</Text>
                 <MenuItem icon="🤖" label="AI Tutor" badge="PRO" badgeType="pro" onPress={() => { closeMenu(); navigation.navigate("AITutor"); }} />
@@ -81,15 +81,15 @@ export default function HomeScreen({ navigation }) {
                 <MenuItem icon="🎯" label="Weak Area Detector" badge="AI" badgeType="ai" onPress={() => { closeMenu(); navigation.navigate("WeakAreas"); }} />
 
                 <Text style={styles.menuSection}>💎 PREMIUM</Text>
-                <MenuItem icon="💎" label="Go Premium" badge="🔥" badgeType="hot" />
-                <MenuItem icon="🛒" label="Test Series Store" />
-                <MenuItem icon="🎁" label="Refer & Earn" />
-                <MenuItem icon="💰" label="Wallet / Coins" />
+                <MenuItem icon="💎" label="Go Premium" badge="🔥" badgeType="hot" onPress={() => { closeMenu(); navigation.navigate("Premium"); }} />
+                <MenuItem icon="🛒" label="Test Series Store" onPress={() => { closeMenu(); navigation.navigate("Store"); }} />
+                <MenuItem icon="🎁" label="Refer & Earn" onPress={() => { closeMenu(); navigation.navigate("Refer"); }} />
+                <MenuItem icon="💰" label="Wallet / Coins" onPress={() => { closeMenu(); navigation.navigate("Wallet"); }} />
 
                 <Text style={styles.menuSection}>🔔 UPDATES</Text>
-                <MenuItem icon="🔔" label="Notifications" badge="5" badgeType="notif" />
-                <MenuItem icon="📢" label="Announcements" />
-                <MenuItem icon="📬" label="Inbox" />
+                <MenuItem icon="🔔" label="Notifications" badge="5" badgeType="notif" onPress={() => { closeMenu(); navigation.navigate("Notifications"); }} />
+                <MenuItem icon="📢" label="Announcements" onPress={() => { closeMenu(); navigation.navigate("Announcements"); }} />
+                <MenuItem icon="📬" label="Inbox" onPress={() => { closeMenu(); navigation.navigate("Inbox"); }} />
 
                 <Text style={styles.menuSection}>⚙️ SETTINGS & SUPPORT</Text>
                 <MenuItem icon="⚙️" label="Settings" onPress={() => { closeMenu(); navigation.navigate("Settings"); }} />
