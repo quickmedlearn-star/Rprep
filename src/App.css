@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #0a0a1a; color: #fff; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Login */
+.login-page { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: linear-gradient(135deg, #0a0a1a, #1a1a3a); }
+.login-card { background: #141428; padding: 40px; border-radius: 20px; border: 1px solid #2a2a4a; width: 380px; text-align: center; box-shadow: 0 0 50px rgba(0,245,255,0.1); }
+.login-logo { font-size: 50px; margin-bottom: 10px; }
+.login-card h1 { color: #00f5ff; font-size: 24px; margin-bottom: 5px; }
+.login-card p { color: #666; font-size: 12px; margin-bottom: 25px; }
+.login-card input { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 10px; border: 1px solid #2a2a4a; background: #0a0a1a; color: #fff; font-size: 14px; outline: none; }
+.login-card input:focus { border-color: #00f5ff; }
+.login-card button { width: 100%; padding: 12px; background: #00f5ff; color: #000; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 5px; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Layout */
+.admin-layout { display: flex; min-height: 100vh; }
+.sidebar { background: #0d0d24; border-right: 1px solid #2a2a4a; transition: width 0.3s; display: flex; flex-direction: column; }
+.sidebar.open { width: 240px; }
+.sidebar.closed { width: 60px; }
+.sidebar-header { display: flex; align-items: center; padding: 15px; border-bottom: 1px solid #2a2a4a; gap: 10px; }
+.sidebar-logo { font-size: 28px; }
+.sidebar-title { color: #00f5ff; font-weight: bold; font-size: 16px; white-space: nowrap; }
+.toggle-btn { background: none; border: none; color: #666; cursor: pointer; font-size: 14px; margin-left: auto; }
+.sidebar-nav { flex: 1; padding: 10px 0; overflow-y: auto; }
+.nav-item { display: flex; align-items: center; padding: 12px 15px; color: #b0b0cc; text-decoration: none; gap: 12px; transition: 0.2s; white-space: nowrap; }
+.nav-item:hover { background: rgba(0,245,255,0.05); color: #fff; }
+.nav-item.active { background: rgba(0,245,255,0.1); color: #00f5ff; border-right: 3px solid #00f5ff; }
+.nav-icon { font-size: 18px; width: 24px; text-align: center; }
+.nav-label { font-size: 13px; }
+.sidebar-footer { padding: 10px; border-top: 1px solid #2a2a4a; }
+.logout-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px; background: rgba(255,45,149,0.1); color: #ff2d95; border: 1px solid rgba(255,45,149,0.3); border-radius: 8px; cursor: pointer; font-size: 13px; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* Main */
+.main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+.top-header { background: #0d0d24; padding: 15px 25px; border-bottom: 1px solid #2a2a4a; display: flex; justify-content: space-between; align-items: center; }
+.top-header h2 { color: #00f5ff; font-size: 18px; }
+.header-user { color: #b0b0cc; font-size: 14px; }
+.content-area { flex: 1; padding: 25px; overflow-y: auto; }
 
-.App-link {
-  color: #61dafb;
-}
+/* Cards */
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+.stat-card { background: #141428; padding: 20px; border-radius: 12px; border: 1px solid #2a2a4a; text-align: center; }
+.stat-card h3 { color: #00f5ff; font-size: 28px; }
+.stat-card p { color: #666; font-size: 12px; margin-top: 5px; }
+.card { background: #141428; padding: 25px; border-radius: 12px; border: 1px solid #2a2a4a; }
+.card h3 { color: #00f5ff; margin-bottom: 10px; }
+.card p { color: #666; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.loading-screen { display: flex; justify-content: center; align-items: center; min-height: 100vh; color: #00f5ff; font-size: 20px; background: #0a0a1a; }
