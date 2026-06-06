@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Rprep-admin/static/css/main.8e7ca81d.css",
-    "main.js": "/Rprep-admin/static/js/main.60a1aae8.js",
+    "main.js": "/Rprep-admin/static/js/main.5e339806.js",
     "static/js/453.e002c980.chunk.js": "/Rprep-admin/static/js/453.e002c980.chunk.js",
     "index.html": "/Rprep-admin/index.html",
     "main.8e7ca81d.css.map": "/Rprep-admin/static/css/main.8e7ca81d.css.map",
-    "main.60a1aae8.js.map": "/Rprep-admin/static/js/main.60a1aae8.js.map",
+    "main.5e339806.js.map": "/Rprep-admin/static/js/main.5e339806.js.map",
     "453.e002c980.chunk.js.map": "/Rprep-admin/static/js/453.e002c980.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8e7ca81d.css",
-    "static/js/main.60a1aae8.js"
+    "static/js/main.5e339806.js"
   ]
 }
